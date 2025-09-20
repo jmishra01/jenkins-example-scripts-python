@@ -5,5 +5,5 @@ from fastapi.responses import JSONResponse
 api = FastAPI()
 
 @api.get("/")
-def index():
+async def index():
   return JSONResponse(content={"hello": "world!!"}, status_code=200)
