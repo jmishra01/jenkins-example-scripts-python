@@ -1,14 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('docker-version') {
       steps {
-        sh 'python3 --version'
+        docker version
       }
     }
-    stage('hello') {
+    stage('build') {
       steps {
-        sh 'python3 hello.py'
+        docker build -t jenpy .
+      }
+    }
+    stage('run-container') {
+      steps {
+        docker run --rm jenpy
       }
     }
   }
