@@ -4,4 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-CMD ["python", "hello.py"]
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["gunicorn", ":5000", "hello:api"]
