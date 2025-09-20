@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-CMD ["uvicorn", "--bind", "0.0.0.0:5000", "hello:api"]
+CMD ["uvicorn", "--port", "5000", "hello:api"]
