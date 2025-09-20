@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('docker-version') {
-      steps {
-        sh 'docker version'
-      }
-    }
     stage('build') {
       steps {
         sh 'docker build -t jenpy .'
@@ -13,7 +8,7 @@ pipeline {
     }
     stage('run-container') {
       steps {
-        sh 'docker run --rm jenpy'
+        sh 'docker run -d -p 5000:5000 jenpy'
       }
     }
   }
