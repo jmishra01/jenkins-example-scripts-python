@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.response import JSONResponse
+from fastapi.responses import JSONResponse
 
 
 api = FastAPI()
