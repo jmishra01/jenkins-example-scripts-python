@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('docker-version') {
       steps {
-        docker version
+        sh 'docker version'
       }
     }
     stage('build') {
       steps {
-        docker build -t jenpy .
+        sh 'docker build -t jenpy .'
       }
     }
     stage('run-container') {
       steps {
-        docker run --rm jenpy
+        sh 'docker run --rm jenpy'
       }
     }
   }
