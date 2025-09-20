@@ -8,7 +8,7 @@ pipeline {
     }
     stage('run-container') {
       steps {
-        sh 'docker run -d -p 5050:5000 jenpy'
+        sh 'docker run -d -p 5050:5050 jenpy'
       }
     }
   }
