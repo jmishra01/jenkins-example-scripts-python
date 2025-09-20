@@ -6,6 +6,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 5050
 
-CMD ["uvicorn", "--port", "5000", "hello:api"]
+CMD ["uvicorn", "--port", "5050", "hello:api"]
