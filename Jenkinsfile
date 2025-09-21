@@ -8,7 +8,7 @@ pipeline {
         }
         stage ("Run") {
             steps {
-                sh 'docker run --rm --name rust-poc rust-project'
+                sh 'docker run --name rust-poc -p 5051:5051 rust-project'
             }
         }
     }
