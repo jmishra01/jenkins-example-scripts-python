@@ -1,2 +1,2 @@
-# jenkins-example-scripts-python
-Run Python script from Jenkins
+# jenkins-pipeline
+Run Pipeline script from Jenkins
