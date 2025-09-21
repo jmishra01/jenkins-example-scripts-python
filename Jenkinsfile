@@ -14,7 +14,7 @@ pipeline {
       }
     }
     
-    stage('remove-old')
+    stage('remove-old') {
       steps {
         sh 'docker container rm jenpy'
       }
