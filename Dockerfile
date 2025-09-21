@@ -1,11 +1,11 @@
-FROM python:3.10-slim
+FROM rust:latest
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN cargo build --release
 
-EXPOSE 5050
+RUN cp /app/target/release/jenkins-pipeline /bin
 
-CMD ["uvicorn", "--port", "5050", "--host", "0.0.0.0", "hello:api"]
+CMD ["jenkins-pipeline"]
