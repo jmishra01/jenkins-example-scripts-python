@@ -42,3 +42,5 @@ stop-remove: stop remove remove-network
 
 console:
 	docker exec -it jenkins-blueocean bash
+logs:
+	docker logs -f jenkins-blueocean
