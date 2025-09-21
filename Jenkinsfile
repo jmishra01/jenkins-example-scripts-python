@@ -10,7 +10,7 @@ pipeline {
        
   stage('run-container') {
       steps {
-        sh 'docker run -d -p 5050:5050 jenpy'
+        sh 'docker run -d -cpus 1 --memory "500mb" -p 5050:5050 jenpy'
       }
     }
   
