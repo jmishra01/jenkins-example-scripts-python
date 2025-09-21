@@ -1,2 +1,2 @@
-# jenkins-pipeline
-Run Pipeline script from Jenkins
+# Rust project - Jenkins Pipeline
+Create job using pipeline option of Jenkins
