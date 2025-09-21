@@ -6,11 +6,12 @@ pipeline {
         sh 'docker build -t jenpy .'
       }
     }
-
-    stage('remove-old') {
+    stage('stop-old') {
       steps {
         sh 'docker container stop jenpy'
       }
+    }
+    stage('remove-old')
       steps {
         sh 'docker container rm jenpy'
       }
